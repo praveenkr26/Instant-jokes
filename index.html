@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JestAI — Instant AI-Style Joke Generator</title>
+  <meta name="description" content="A clean, responsive joke generator with voice, copy, and share. Free and open." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-blur" aria-hidden="true"></div>
+
+  <header class="container header">
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true">
+        <!-- laugh icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M18 13a6 6 0 0 1-6 5 6 6 0 0 1-6-5h12Z"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+      </div>
+      <span class="brand-name">JestAI</span>
+    </div>
+    <nav class="nav">
+      <a href="#generator">Generator</a>
+      <a href="#features">Features</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="generator" class="hero">
+      <div class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M12 3l1.9 5.8L20 10l-5 3.6L16.5 20 12 16.8 7.5 20 9 13.6 4 10l6.1-1.2L12 3z"/></svg>
+        Powered by : Mr. Praveen
+      </div>
+      <h1>Instant jokes,<br/><span class="grad-text">on demand.</span></h1>
+      <p class="lead">A responsive joke generator with voice playback, copy and share. Built with pure HTML, CSS &amp; JavaScript.</p>
+
+      <div class="card">
+        <label for="category" class="label">Category (optional)</label>
+        <div class="row">
+          <input id="category" type="text" placeholder="e.g. programming, animals, coffee…" autocomplete="off" />
+          <button id="generateBtn" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 3l1.9 5.8L20 10l-5 3.6L16.5 20 12 16.8 7.5 20 9 13.6 4 10l6.1-1.2L12 3z"/></svg>
+            <span>Generate Joke</span>
+          </button>
+        </div>
+
+        <div id="jokeBox" class="joke-box">
+          <p class="joke-empty">Your joke will appear here. Press <strong>Generate Joke</strong> to start.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="feature">
+        <h3>Lightning fast</h3>
+        <p>Pulls from a free public joke API with instant responses.</p>
+      </div>
+      <div class="feature">
+        <h3>Clean &amp; safe</h3>
+        <p>Family-friendly humor filtered automatically.</p>
+      </div>
+      <div class="feature">
+        <h3>Voice, copy &amp; share</h3>
+        <p>Listen with built-in speech, or share anywhere in one click.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> JestAI — Built with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
